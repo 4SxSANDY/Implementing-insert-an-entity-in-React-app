@@ -31,11 +31,16 @@ const Dashboard = () => {
     // Add more movie objects as needed
   ]);
 
+  const handleSubmit=()=>{
+    navigate('/addform')
+  }
   return (
     <div className="dashboard">
       <header className="dashboard-header">
         <h1>Movie Collection</h1>
       </header>
+
+      <button onClick={handleSubmit}>Add Movie</button>
       <div className="movie-list">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
